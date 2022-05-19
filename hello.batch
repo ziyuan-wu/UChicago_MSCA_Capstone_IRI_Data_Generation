@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=hello
+#SBATCH --output=%j_out.log
+#SBATCH --error=%j_err.log
+#SBATCH --time=3:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=11
+#SBATCH --partition=broadwl
+#SBATCH --mem=15G
+# Set up the environment
+export OPENMP_NUM_THREADS=11
+source /project2/msca/ivy2/software2/etc/MSCA_31009-4_env.sh
+
+python3 Simple\ Model.py
