@@ -1,0 +1,12 @@
+/software/python-anaconda-2021.05-el7-x86_64/lib/python3.8/site-packages/numpy/lib/arraysetops.py:583: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  mask |= (ar1 == a)
+Traceback (most recent call last):
+  File "/home/stevenwuziyuan/UChicago_MSCA_Capstone_IRI_Data_Generation/simple_model.py", line 22, in <module>
+    model.fit(df)
+  File "/home/stevenwuziyuan/.local/lib/python3.8/site-packages/sdv/tabular/base.py", line 147, in fit
+    self._metadata.fit(data)
+  File "/home/stevenwuziyuan/.local/lib/python3.8/site-packages/sdv/metadata/table.py", line 578, in fit
+    self._fields_metadata = self._build_fields_metadata(data)
+  File "/home/stevenwuziyuan/.local/lib/python3.8/site-packages/sdv/metadata/table.py", line 397, in _build_fields_metadata
+    field_meta['transformer'] = self._dtype_transformers.get(np.dtype(dtype).kind)
+TypeError: Cannot interpret 'CategoricalDtype(categories=['A', 'A+', 'B', 'C', 'NONE'], ordered=False)' as a data type

@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('~/IRI/store_drug_combined_total.csv', index_col=0)
 
 
-df['F'] = pd.Categorical(df['F'])
-df['D'] = pd.Categorical(df['D'])
-df['PR'] = pd.Categorical(df['PR'])
+df['F'] = df['F'].astype("str")
+df['D'] = df['D'].astype("str")
+df['PR'] = df['PR'].astype("str")
 
 from sdv.tabular import CTGAN
 
